@@ -1,0 +1,19 @@
+{
+  "name": "tracking-of-ball-and-players-in-beach-volleyball-videos",
+  "version": "1.0.0",
+  "description": "Tesi",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelenardini99/Tracking-of-Ball-and-Players-in-Beach-Volleyball-Videos.git"
+  },
+  "author": "Michele Nardini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michelenardini99/Tracking-of-Ball-and-Players-in-Beach-Volleyball-Videos/issues"
+  },
+  "homepage": "https://github.com/michelenardini99/Tracking-of-Ball-and-Players-in-Beach-Volleyball-Videos#readme"
+}
