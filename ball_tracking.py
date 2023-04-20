@@ -6,7 +6,6 @@ from player import Player
 from track_ball import plot_boxes
 from track_player import detect_player
 from roboflow import Roboflow
-from PIL import Image, ImageDraw, ImageFont
 
 """ rf = Roboflow(api_key="VHujG1OPZBfGofAHKf5a")
 project = rf.workspace().project("volleyball-tracking")
@@ -50,7 +49,7 @@ frame_height = int(cap.get(4))
 
 # Define the codec and create a video writer object
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-out_video = cv2.VideoWriter('public/output_video3.mp4',fourcc, fps, (frame_width,frame_height))
+out_video = cv2.VideoWriter('public/output_video.mp4',fourcc, fps, (frame_width,frame_height))
 
 players = []
 team_1_points=0
@@ -87,7 +86,7 @@ while cap.isOpened():
         cv2.polylines(frame,[pts],True,(0,255,0),2)
         rect2=cv2.boundingRect(vertices)
 
-        data = net, output_layers, width, height, players, rect2, classes
+        data = net, output_layers, width, height, players, rect2
 
         frame = detect_player(frame, data)
         frame = plot_boxes(frame, model_ball)

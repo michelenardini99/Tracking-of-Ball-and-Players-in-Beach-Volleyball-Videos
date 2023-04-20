@@ -1,7 +1,10 @@
 import cv2
 
 # Carica l'immagine
-image = cv2.imread(r"public\ball.png")
+video = cv2.VideoCapture("public/test.mp4")
+
+# Leggi il primo frame
+ret, frame = video.read()
 
 # Crea una finestra per mostrare l'immagine
 cv2.namedWindow("Immagine")
@@ -15,9 +18,10 @@ def mouse_callback(event, x, y, flags, param):
 cv2.setMouseCallback("Immagine", mouse_callback)
 
 # Mostra l'immagine
-cv2.imshow("Immagine", image)
+cv2.imshow("Immagine", frame)
 
 # Attendi il clic del mouse
+video.release()
 cv2.waitKey(0)
 
 # Chiudi la finestra
