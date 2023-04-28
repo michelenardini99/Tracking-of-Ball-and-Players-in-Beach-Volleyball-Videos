@@ -3,10 +3,10 @@ import numpy as np
 
 TOL=100
 
-def is_inside(rect1, rect2):
-    x1, y1, w1, h1 = rect1
-    x2, y2, w2, h2 = rect2
-    return x1 > x2 and y1 > y2-TOL and x1 + w1 < x2 + w2
+def is_inside(player, court):
+    x1, y1 = player
+    x2, y2, w2, h2 = court
+    return x1 > x2 and x1 < x2 + w2 and y1 > y2 and y1 < y2 + h2
 
 def is_above(rect1, rect2):
     x1, y1, w1, h1 = rect1

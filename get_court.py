@@ -3,13 +3,13 @@ import numpy as np
 import pickle
 
 # Set up the video capture
-cap = cv2.imread(r"public\court.jpg")
+cap = cv2.VideoCapture("public/test.mp4")
 
-""" # Read the first frame
-ret, frame = cap.read() """
+# Read the first frame
+ret, frame = cap.read()
 
 # Create a copy of the frame
-frame_copy = cap.copy()
+frame_copy = frame.copy()
 
 # Define the four vertices of the trapezoid
 trap_vertices = []
@@ -50,7 +50,7 @@ cv2.namedWindow("Frame")
 cv2.setMouseCallback("Frame", on_mouse_click)
 
 # Show the frame
-cv2.imshow("Frame", cap)
+cv2.imshow("Frame", frame)
 
 # Wait for the user to press a key
 cv2.waitKey(0)

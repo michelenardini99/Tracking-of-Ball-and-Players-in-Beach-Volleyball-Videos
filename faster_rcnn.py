@@ -80,5 +80,3 @@ out_video.release()
 
 # Close all windows
 cv2.destroyAllWindows()
-
-""" print("Tempo di elaborazione:", round(end-start,3), "secondi") """
